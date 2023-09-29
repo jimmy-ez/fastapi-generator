@@ -9,7 +9,7 @@ if [ ! -d "$folder_name" ]; then
 fi
 
 # Define the content for main.py
-main_py_content="from fastapi import FastAPI\napp = FastAPI()\n@app.get('/')\ndef index():\n\treturn 'Hello Fast API'"
+main_py_content="from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/')\ndef index():\n\treturn 'Hello Fast API'"
 
 # Create or overwrite main.py in the app folder with the defined content
 echo -e "$main_py_content" > "$folder_name/main.py"
